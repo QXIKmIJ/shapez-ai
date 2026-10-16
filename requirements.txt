@@ -1,0 +1,9 @@
+# Shapez AI - Production Dependencies
+# Author: QXIK_mIJ
+# License: Apache License 2.0
+
+aiohttp>=3.9.0
+pydantic>=2.5.0
+httpx>=0.25.0
+psutil>=5.9.0
+mcp>=1.0.0

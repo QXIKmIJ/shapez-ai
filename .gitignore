@@ -1,0 +1,56 @@
+# ===============================================================================
+# Shapez AI - Git Ignore
+# Author: QXIK_mIJ
+# License: Apache License 2.0
+# ===============================================================================
+
+# 1. Game Binaries & Third-Party Assets (Exceeds GitHub 100MB limit)
+shapez.exe
+*.dll
+*.pak
+*.dat
+*.bin
+vk_swiftshader_icd.json
+version
+locales/
+resources/
+swiftshader/
+MULTIPLAYER*
+LICENSES.chromium.html
+
+# 2. Python Environment & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+.env
+.env.*
+*.egg-info/
+dist/
+build/
+
+# 3. Shapez AI Session Caches & Heavy Data
+shapez-ai/python/data/history.db
+shapez-ai/python/data/history.db-journal
+shapez-ai/python/data/entities.json
+shapez-ai/python/data/sessions/test_*.json
+*.log
+*.tmp
+
+# 4. Scratch & Debug Scripts
+inspect_dom.py
+/test_*.py
+scratch/
+
+# 5. OS & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
