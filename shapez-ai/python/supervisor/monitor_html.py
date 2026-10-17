@@ -454,13 +454,13 @@ MONITOR_HTML = """<!DOCTYPE html>
             </div>
         </div>
         <div class="header-controls">
-            <button class="btn btn-pause" id="btn-pause-toggle" onclick="togglePause()">▶ Возобновить ИИ</button>
+            <button class="btn btn-pause" id="btn-pause-toggle" onclick="togglePause()">Возобновить ИИ</button>
             <select class="session-select" id="session-select" onchange="changeSession()">
                 <option value="session_primary">session_primary</option>
             </select>
-            <button class="btn" onclick="triggerReplan()">🔄 Перепланировать</button>
-            <button class="btn" onclick="moveWindow(1)">🖥 Монитор 1</button>
-            <button class="btn" onclick="moveWindow(2)">🖥 Монитор 2</button>
+            <button class="btn" onclick="triggerReplan()">Перепланировать</button>
+            <button class="btn" onclick="moveWindow(1)">Монитор 1</button>
+            <button class="btn" onclick="moveWindow(2)">Монитор 2</button>
         </div>
     </header>
 
@@ -491,7 +491,7 @@ MONITOR_HTML = """<!DOCTYPE html>
         <!-- 1. Текущая цель и план развития -->
         <div class="card">
             <div class="card-header">
-                <h2>🎯 Задача и Дорожная карта</h2>
+                <h2>Задача и Дорожная карта</h2>
                 <span class="badge" id="badge-goal-type">Direct Route</span>
             </div>
             <div class="content-box">
@@ -520,7 +520,7 @@ MONITOR_HTML = """<!DOCTYPE html>
         <!-- 2. Архитектурное объяснение -->
         <div class="card">
             <div class="card-header">
-                <h2>🧠 Архитектурное решение (AI Strategy)</h2>
+                <h2>Архитектурное решение (AI Strategy)</h2>
                 <span class="badge" id="badge-patch">Patch (0, 0)</span>
             </div>
             <div class="content-box">
@@ -542,7 +542,7 @@ MONITOR_HTML = """<!DOCTYPE html>
         <!-- 3. Настоящий поток мыслей LLM (Chain of Thought / <think>) -->
         <div class="card">
             <div class="card-header">
-                <h2>⚡ Native CoT (<think> Stream)</h2>
+                <h2>Native CoT (Поток рассуждений)</h2>
                 <span class="badge" id="badge-cot-len">0 tokens</span>
             </div>
             <div class="content-box">
@@ -553,7 +553,7 @@ MONITOR_HTML = """<!DOCTYPE html>
         <!-- 4. Инженерный чертеж и топология -->
         <div class="card">
             <div class="card-header">
-                <h2>📐 Топология фабрики</h2>
+                <h2>Топология фабрики</h2>
                 <span class="badge" id="badge-components">0 объектов</span>
             </div>
             <div class="content-box">
@@ -569,7 +569,7 @@ MONITOR_HTML = """<!DOCTYPE html>
         <!-- 5. Диагностика исполнения & Watchdog -->
         <div class="card">
             <div class="card-header">
-                <h2>🛡 Диагностика & Самоисцеление</h2>
+                <h2>Диагностика и самовосстановление</h2>
                 <span class="badge" id="badge-watchdog">Ready</span>
             </div>
             <div class="content-box">
@@ -591,7 +591,7 @@ MONITOR_HTML = """<!DOCTYPE html>
         <!-- 6. Моды и улучшения Hub -->
         <div class="card">
             <div class="card-header">
-                <h2>🧩 Моды & Апгрейды</h2>
+                <h2>Моды и обновления</h2>
                 <span class="badge" id="badge-mods-count">14 модов</span>
             </div>
             <div class="content-box">
@@ -617,8 +617,8 @@ MONITOR_HTML = """<!DOCTYPE html>
     <!-- Bottom Cockpit Section: Interactive Chat and Full Persistent History -->
     <div class="bottom-section">
         <div class="tabs-header">
-            <button class="tab-btn active" id="tab-btn-chat" onclick="switchTab('chat')">💬 Интерактивный диалог с ИИ</button>
-            <button class="tab-btn" id="tab-btn-history" onclick="switchTab('history')">📜 Полная история решений (Persistent History)</button>
+            <button class="tab-btn active" id="tab-btn-chat" onclick="switchTab('chat')">Интерактивный диалог с ИИ</button>
+            <button class="tab-btn" id="tab-btn-history" onclick="switchTab('history')">Полная история решений (Persistent History)</button>
         </div>
 
         <!-- Tab 1: Interactive Chat -->
@@ -641,7 +641,7 @@ MONITOR_HTML = """<!DOCTYPE html>
 
                 <div class="chat-input-row">
                     <input type="text" class="chat-input" id="chat-input" placeholder="Введите указание для Shapez AI (например: 'Сделай фабрику компактнее')..." onkeydown="if(event.key==='Enter') sendChatMessage()">
-                    <button class="btn" style="background: var(--accent-purple); color: #0a0512; font-weight: 700;" onclick="sendChatMessage()">Отправить ↵</button>
+                    <button class="btn" style="background: var(--accent-purple); color: #0a0512; font-weight: 700;" onclick="sendChatMessage()">Отправить</button>
                 </div>
             </div>
         </div>
@@ -696,12 +696,12 @@ MONITOR_HTML = """<!DOCTYPE html>
                 dot.className = "status-dot paused";
                 stText.textContent = "PAUSED";
                 btnPause.className = "btn btn-pause active";
-                btnPause.textContent = "▶ Возобновить ИИ";
+                btnPause.textContent = "Возобновить ИИ";
             } else {
                 dot.className = "status-dot";
                 stText.textContent = "ACTIVE";
                 btnPause.className = "btn btn-pause";
-                btnPause.textContent = "⏸ Пауза ИИ";
+                btnPause.textContent = "Приостановить ИИ";
             }
 
             const goal = s.goal || {};

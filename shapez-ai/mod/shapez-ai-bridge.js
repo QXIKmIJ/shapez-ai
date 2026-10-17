@@ -38,7 +38,7 @@ class Mod extends shapez.Mod {
         this.frameCount = 0;
         this.lastFpsUpdate = performance.now();
         this.aiStatus = "PAUSED";
-        this.aiThought = "ИИ в режиме ожидания. Нажмите [▶ Возобновить], чтобы начать.";
+        this.aiThought = "ИИ в режиме ожидания. Нажмите [Возобновить ИИ], чтобы начать.";
 
         const loopFps = () => {
             this.frameCount++;
@@ -1154,10 +1154,10 @@ class Mod extends shapez.Mod {
             <div class="ai-drag-handle" title="Зажмите и перетащите HUD в любое место экрана">⠿</div>
             <div class="ai-indicator" id="shapez-ai-indicator"></div>
             <div class="ai-title">SHAPEZ AI N-0.3.0</div>
-            <button id="shapez-ai-pause-btn" class="hud-btn paused" title="Управление активностью автономного агента">▶ Возобновить ИИ</button>
+            <button id="shapez-ai-pause-btn" class="hud-btn paused" title="Управление активностью автономного агента">Возобновить ИИ</button>
             <div id="shapez-ai-status" class="ai-status-badge">PAUSED</div>
             <div id="shapez-ai-fps" class="ai-fps-badge">-- FPS</div>
-            <div class="ai-thought" id="shapez-ai-thought" title="Текущая мысль ИИ">ИИ в режиме ожидания. Нажмите [▶], чтобы запустить.</div>
+            <div class="ai-thought" id="shapez-ai-thought" title="Текущая мысль ИИ">ИИ в режиме ожидания. Нажмите [Возобновить ИИ], чтобы запустить.</div>
             <button id="shapez-ai-collapse-btn" class="hud-btn-icon" title="Свернуть HUD">─</button>
         `;
         document.body.appendChild(hud);
@@ -1223,10 +1223,10 @@ class Mod extends shapez.Mod {
         if (!btn) return;
         if (this.isAiPaused) {
             btn.className = "hud-btn paused";
-            btn.textContent = "▶ Возобновить ИИ";
+            btn.textContent = "Возобновить ИИ";
         } else {
             btn.className = "hud-btn";
-            btn.textContent = "⏸ Пауза ИИ";
+            btn.textContent = "Приостановить ИИ";
         }
     }
 
